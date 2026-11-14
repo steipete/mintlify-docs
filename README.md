@@ -28,6 +28,8 @@ mint dev
 
 View your local preview at `http://localhost:3000`.
 
+CI validates content, navigation, configuration, and OpenAPI using the pinned Mintlify CLI. Run the same check locally with `npx --yes --package mint@4.3.34 mint validate --telemetry=false`.
+
 ## Publishing changes
 
 Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.

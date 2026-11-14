@@ -1,0 +1,16 @@
+name: Docs
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Validate content, navigation, configuration, and OpenAPI
+        run: npx --yes --package mint@4.3.34 mint validate --telemetry=false
